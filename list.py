@@ -1,19 +1,22 @@
 #Question 2
-user1 = ["aman","raj","ayush","gracie"]
-
-user2 = ["akshay","rakesh","raj","ram"]
-
-#Merging the given two lists
-user_list = user1+ user2
+list1 = ["aman","raj","ayush","gracie"]
+list2 = ["akshay","rakesh","raj","ram"]
 
 
-#creating a function to remove the duplicates
-#the list is converted into dictionary using the list values as keys and then again
-#converting them back into a list which will remove the duplicates
-def my_function(x):
-  return list(dict.fromkeys(x))
+#creating a function to check for duplicate values and then removing them
+#and creating list without the duplicate values
+def find_common(list1,list2):
+    for x in list1:
+      for y in list2:
+        if x == y :
+          list2.remove(x)
+          list1.remove(y)
 
-new_list = my_function(user_list)
 
-print(new_list)
+    print(" list1:",list1)
+    print(" list2:",list2)
+    print(" new_list:",list1+list2)
+
+
+find_common(list1,list2)
 
